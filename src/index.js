@@ -9,6 +9,9 @@ import Snackbar from './ui-library/snackbar';
 // create tooltips
 const tooltip = new Tooltip(document.querySelectorAll('.tooltip'));
 tooltip.init();
+window.addEventListener('resize', () => {
+  tooltip.getTooltipsPosition();
+});
 
 // create dropdowns
 const dropdowns = new Dropdown(document.querySelectorAll('.dropdown'));

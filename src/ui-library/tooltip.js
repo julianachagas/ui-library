@@ -17,18 +17,33 @@ export default class Tooltip {
       const tooltipArrow = document.createElement('div');
       tooltipArrow.classList.add('tooltip-arrow');
       tip.appendChild(tooltipArrow);
-      // define position of the tooltip:
+      // add event listeners on the current element
+      item.addEventListener('mouseenter', () => {
+        tip.classList.add('active');
+      });
+      item.addEventListener('mouseleave', () => {
+        tip.classList.remove('active');
+      });
+    });
+    // define position of the tooltips:
+    this.getTooltipsPosition();
+  }
+
+  getTooltipsPosition() {
+    this.elements.forEach(item => {
       // get position of the current element (the one that will have the tooltip)
       const elementPosition = item.getBoundingClientRect();
+      const tip = item.querySelector('.tip');
+      const arrow = item.querySelector('.tooltip-arrow');
       // define tooltip y position, above the element:
       let top = elementPosition.top - 3 - tip.offsetHeight;
       if (top < 0) {
         // if crossing the top window edge, show below instead
         top = elementPosition.top + item.offsetHeight + 3;
         // change position of tooltip arrow
-        tooltipArrow.style.top = 'initial';
-        tooltipArrow.style.bottom = '100%';
-        tooltipArrow.style.transform = 'rotate(180deg)';
+        arrow.style.top = 'initial';
+        arrow.style.bottom = '100%';
+        arrow.style.transform = 'rotate(180deg)';
       }
       // define tooltip x position:
       let left =
@@ -39,13 +54,6 @@ export default class Tooltip {
       }
       tip.style.top = `${top}px`;
       tip.style.left = `${left}px`;
-      // add event listeners on the current element
-      item.addEventListener('mouseenter', () => {
-        tip.classList.add('active');
-      });
-      item.addEventListener('mouseleave', () => {
-        tip.classList.remove('active');
-      });
     });
   }
 }
