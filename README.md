@@ -1,10 +1,10 @@
 # UI Component Library
 
-This project is a library of reusable components: tooltip, dropdown, tabbed content, and snackbar, built with HTML, CSS, and JavaScript.
+This project is a small library of reusable components: tooltips, dropdowns, tabbed content, and snackbar. It was built with HTML, CSS, and JavaScript. Webpack was used as the module bundler.
 
-## Status
+## Link
 
-🚧 _in progress_ 🚧
+- [UI Library](https://julianachagas.github.io/ui-library/)
 
 ## Technologies
 
@@ -15,6 +15,7 @@ This project is a library of reusable components: tooltip, dropdown, tabbed cont
 ## Useful resources
 
 - [JavaScript.info - Tooltip behavior](https://javascript.info/task/behavior-tooltip)
+- [Modern JavaScript Course - The Net Ninja](https://javascript.info/task/behavior-tooltip)
 
 <br>
 
