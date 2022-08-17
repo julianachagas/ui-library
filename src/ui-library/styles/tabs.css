@@ -1,0 +1,39 @@
+.tabs > ul {
+  padding: 0;
+}
+
+.tabs .trigger {
+  list-style-type: none;
+  display: inline-block;
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background: #f0f8ff;
+  margin-bottom: 2rem;
+}
+
+.tabs .trigger + .trigger {
+  margin-left: 1rem;
+}
+
+.tabs .trigger.active {
+  background: #d80032;
+  color: #fff;
+}
+
+.tabs .trigger:hover {
+  border: 1px solid #d80032;
+}
+
+.tabs .content {
+  padding: 2rem;
+  background: #f0f8ff;
+  border-radius: 10px;
+  display: none;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.tabs .content.active {
+  display: block;
+}

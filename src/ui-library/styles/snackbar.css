@@ -1,0 +1,18 @@
+.snackbar {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  background-color: #d80032;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+  margin-top: -100%;
+}
+
+.snackbar.active {
+  margin-top: 0;
+}

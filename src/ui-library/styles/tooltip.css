@@ -1,0 +1,33 @@
+.tooltip {
+  color: #d80032;
+  display: inline-block;
+  border-bottom: 1px dotted #d80032;
+  cursor: help;
+}
+
+.tip {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s;
+  background-color: #d80032;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px 10px;
+  position: absolute;
+}
+
+.tip.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* tooltip arrow */
+.tooltip-arrow {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border: 5px solid transparent;
+  border-top-color: #d80032;
+}
